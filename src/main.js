@@ -59,16 +59,5 @@ if(numberConformation){
      */
  
     const SearchResult = members.find( data => data.call === numberSearch);
-    
-    /**
-     * Get All Number
-     */
-    
-    const finalSearchResult = [];
-    
-    SearchResult.donationsHistory.map((item) => {
-      finalSearchResult.push(item);
-    });
-    
-    console.table(finalSearchResult);
+    console.table(SearchResult.donationsHistory);
 }
