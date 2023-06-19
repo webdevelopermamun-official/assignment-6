@@ -2,6 +2,9 @@
  * prompt data collection
  */
 
+
+
+
 let bloodGroupSearch = prompt("Available blood group :- A+, A-, B-, B+, O-, O+");
 
 /**
@@ -52,26 +55,20 @@ if(numberConformation){
     let numberSearch = prompt("Available Number:- 01903211029, 01903211028, 01903211027, 01903211028, 01903211026, 01903211025, 01903211023, 01903211022, 01903211021, 01903211001, 01903211002, 01903211003, 01903211004, 01903211704, 01903211005, 01903211006, 01903211009, 01903211209, 01903211509, 01943211509");
 
     /**
-     * All donor data filtering
+     * All donor data Find
      */
-    const SearchResult = members.filter(
-      (data) =>
-        (data.call === numberSearch) 
-        
-    );
+ 
+    const SearchResult = members.find( data => data.call === numberSearch);
     
     /**
      * Get All Number
      */
     
     const finalSearchResult = [];
-    SearchResult.map((item) => {
+    
+    SearchResult.donationsHistory.map((item) => {
       finalSearchResult.push(item);
     });
     
     console.table(finalSearchResult);
 }
-
-
-
-
